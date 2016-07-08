@@ -37,6 +37,11 @@
         </dependency>
         <!-- TODO Maybe an Json Api too-->
 
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.3</version>
+        </dependency>
         <!--Tests -->
         <dependency>
             <groupId>junit</groupId>
