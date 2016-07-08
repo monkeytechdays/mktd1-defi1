@@ -1,11 +1,14 @@
 package com.monkeypatch.mktd.feignvsretrofit.exo1;
 
 import com.monkeypatch.mktd.feignvsretrofit.exo1.model.MonkeyRace;
+import feign.Headers;
+import feign.RequestLine;
 
 import java.util.List;
 
-// TODO you may update this interface to complete the exo1
+@Headers("Content-Type: application/json")
 public interface MonkeyRaceApi {
 
+    @RequestLine("GET /races")
     List<MonkeyRace> getMonkeyRaces();
 }

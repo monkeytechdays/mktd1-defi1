@@ -1,8 +1,9 @@
 package com.monkeypatch.mktd.feignvsretrofit.exo1.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Map;
 
-// TODO you may annotate this class for XML mapping
+@XmlRootElement(name = "MonkeyStatistics", namespace = "")
 public class MonkeyStatistics {
     private MonkeyCounter countMonkeys;
     private Map<String, Integer> countMonkeysByRaces;
