@@ -16,23 +16,22 @@ class ApiFactory {
                 .target(MonkeyApi.class, url + "/monkeys");
     }
 
-    static MonkeyRaceApi buildRaceApi(String url) {
-        return Feign
-                .builder()
-                .decoder(new GsonDecoder())
-                .target(MonkeyRaceApi.class, url);
-    }
-
     static MonkeyStatsApi buildStatsApi(String url) {
 
         JAXBContextFactory jaxbFactory = new JAXBContextFactory.Builder()
                 .withMarshallerJAXBEncoding("UTF-8")
                 .build();
 
-
         return Feign
                 .builder()
                 .decoder(new JAXBDecoder(jaxbFactory))
                 .target(MonkeyStatsApi.class, url);
+    }
+
+    static MonkeyRaceApi buildRaceApi(String url) {
+        return Feign
+                .builder()
+                .decoder(new GsonDecoder())
+                .target(MonkeyRaceApi.class, url);
     }
 }
