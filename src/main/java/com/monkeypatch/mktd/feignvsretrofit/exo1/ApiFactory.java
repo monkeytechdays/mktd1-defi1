@@ -13,7 +13,7 @@ class ApiFactory {
                 .builder()
                 .decoder(new GsonDecoder())
                 .encoder(new GsonEncoder())
-                .target(MonkeyApi.class, url);
+                .target(MonkeyApi.class, url + "/monkeys");
     }
 
     static MonkeyRaceApi buildRaceApi(String url) {

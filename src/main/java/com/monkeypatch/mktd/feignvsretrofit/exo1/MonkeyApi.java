@@ -9,15 +9,15 @@ import feign.RequestLine;
 @Headers("Content-Type: application/json")
 public interface MonkeyApi {
 
-    @RequestLine("GET /monkeys?page={page}")
+    @RequestLine("GET ?page={page}")
     Page<Monkey> getMonkeys(@Param("page") int page);
 
-    @RequestLine("GET /monkeys/{name}")
+    @RequestLine("GET /{name}")
     Monkey getMonkeyByName(@Param("name") String name);
 
-    @RequestLine("POST /monkeys")
+    @RequestLine("POST ")
     Monkey createMonkey(Monkey monkey);
 
-    @RequestLine("DELETE /monkeys/{id}")
+    @RequestLine("DELETE /{id}")
     void deleteMonkey(@Param("id") String id);
 }
