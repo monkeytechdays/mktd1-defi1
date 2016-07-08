@@ -15,11 +15,26 @@
 
         <!-- Test Dependencies -->
         <junit.version>4.12</junit.version>
+        <retrofit.version>2.1.0</retrofit.version>
     </properties>
 
     <dependencies>
         <!-- TODO Feign or Retrofit -->
-
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>retrofit</artifactId>
+            <version>${retrofit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-gson</artifactId>
+            <version>${retrofit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-simplexml</artifactId>
+            <version>${retrofit.version}</version>
+        </dependency>
         <!-- TODO Maybe an Json Api too-->
 
         <!--Tests -->
